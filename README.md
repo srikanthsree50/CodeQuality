@@ -22,6 +22,7 @@ There are three routes:
 The server persists using a SQLite3 database named `database.sqlite` in the site root.
 
 ## Development
+this project uses ESLINT for suspicious code detection.
 
 This  project uses EditorConfig to standardize text editor configuration
 Visit http://editorconfig.org for details.

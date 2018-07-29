@@ -1,33 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
-let index = require('./routes/index');
-let admin = require('./routes/admin');
-let reservations = require('./routes/reservations');
+const index = require('./routes/index');
+const admin = require('./routes/admin');
+const reservations = require('./routes/reservations');
 
 const auth = require('./lib/middleware/auth.js');
 
-const configuration = {}
-
-
-
-
-
-
-
-
-
-
-
-if (1) {
-
-}
-
-var app = express();
+const app = express();
 
 // Static assets.
 // Move this after the logger if you want to log requests for static assets.
@@ -54,7 +38,7 @@ app.use('/reservations', reservations);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -68,6 +52,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+  next();
 });
 
 module.exports = app;

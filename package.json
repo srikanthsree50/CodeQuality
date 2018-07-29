@@ -13,17 +13,20 @@
   "scripts": {
     "debug": "cross-env DEBUG=nadia:* nodemon",
     "eslint": "eslint",
-    "start": "node bin/www"
+    "start": "node bin/www",
+    "test": "mocha test/**/*.js"
   },
   "dependencies": {
     "basic-auth": "^1.1.0",
     "body-parser": "~1.17.1",
+    "chai": "^4.1.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "eslint": "^5.2.0",
     "express": "~4.15.2",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
+    "mocha": "^5.2.0",
     "moment": "^2.18.1",
     "morgan": "~1.8.1",
     "node-env": "^0.1.6",
