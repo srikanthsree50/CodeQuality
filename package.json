@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Nadia's Garden Reservations",
   "main": "bin/www",
-  "repository": "git@github.com:fluxsauce/nadia.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srikanthsree50/CodeQuality.git"
+  },
   "author": "Jon Peck <jpeck@fluxsauce.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
     "debug": "cross-env DEBUG=nadia:* nodemon",
+    "eslint": "eslint",
     "start": "node bin/www"
   },
   "dependencies": {
@@ -16,6 +20,7 @@
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
+    "eslint": "^5.2.0",
     "express": "~4.15.2",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
